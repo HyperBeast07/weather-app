@@ -1,5 +1,5 @@
 // JS Code to deal with DOM Manipulation
-
+const edit = 1
 const logo = document.querySelector(".logo")
 const searchBar = document.querySelector(".search-bar")
 // const magnifyingGlass= document.querySelector(".input-image")
