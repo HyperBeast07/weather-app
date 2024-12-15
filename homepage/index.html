@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css" />
+    
+    
+  </head>
+  <body class="fixed-container">
+    <header class="m-12 mx-auto flex items-center place-content-between ">
+      <div class=""><a href="#" class="flex"><img src="../img/lightSun.svg" class="logo mr-1.5 w-6"><span class="text-base ease-in-out duration-500">WeatherApp</span></a></div>
+      <div id="toggle">
+        <i class="indicator"></i>
+      </div>
+    </header>
+
+    <!--custom classes: "change-location", "card", "time", "icon", "detail"-->
+    <div class="flex mx-auto w-max m-3">
+      <!--Card design of the weather information-->
+      <div class="hidden max-w-sm rounded-2xl border shadow-xl card background-card p-8" >
+        <div class="details">
+          <div class="font-bold text-xl mb-4">NOW</div>
+          <div class="flex justify-center">
+            <div class="text-4xl font-bold">
+              <span>temp</span>
+              <span class="celcius">&deg;C</span>
+            </div>
+            <div class="icon mx-auto text-center items-center">
+              <img src="../img/icons/1.svg" alt="" class="w-24 mr-8"/>
+            </div>
+          </div>
+          <!-- <img src="https://dummyimage.com/400x300/" class="p-10 rounded-lg time" /> -->
+          <div class="uppercase">
+            <h5 class="my-1">City Name</h5>
+            <div class="my-3">Weather Condtion</div>
+          </div>
+        </div>
+
+        <div class="horizontal-line"></div>
+
+        <div class="background-card rounded-2xl current-day-and-time">
+          <div class="mb-1 mt-3">Currently</div>
+          <div class="mb-1">12:30 PM</div>
+          <div class="">Tue, 16th April 2024</div>
+        </div>
+      </div>
+      <div class="ml-4">
+        <div class="search-card border shadow-xl rounded-2xl p-4 mb-3 h-48">
+          <!--form to enter city name-->
+          <form class="change-location mt-4 mb-8 text-center">
+          <label class="block mb-6" for="city">Enter a location for weather information</label>
+          <input
+              id="city"
+              name="city"
+              type="text"
+              class="bg-black border rounded-2xl p-4 w-full search-bar input-image"
+              placeholder=""
+          />
+          </form>
+      </div>
+      <div class="hidden five-day-forecasts-container">
+        <div class="ease-in-out duration-500 ml-2 mb-1 text-sm">5 Days Forecast</div>
+        <div class="five-day-forecasts border rounded-2xl background-card shadow-xl pt-2 pb-1 px-1">
+            <div class="flex items-center">
+              <img src="../img/icons/1.svg" alt="" class="w-16">
+              <div>
+                <div>
+                  Wednesday
+                </div>
+                <div>
+                  <span>18 &deg;C |</span>
+                  <span>18 &deg;C</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="../img/icons/2.svg" alt="" class="w-16">
+              <div>
+                <div>
+                  Thursday
+                </div>
+                <div>
+                  <span>18 &deg;C |</span>
+                  <span>18 &deg;C</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="../img/icons/3.svg" alt="" class="w-16">
+              <div>
+                <div>
+                  Friday
+                </div>
+                <div>
+                  <span>18 &deg;C |</span>
+                  <span>18 &deg;C</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="../img/icons/4.svg" alt="" class="w-16">
+              <div>
+                <div>
+                  Saturday
+                </div>
+                <div>
+                  <span>18 &deg;C |</span>
+                  <span>18 &deg;C</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center mb-2">
+              <img src="../img/icons/5.svg" alt="" class="w-16">
+              <div>
+                <div>
+                  Sunday
+                </div>
+                <div>
+                  <span>18 &deg;C |</span>
+                  <span>18 &deg;C</span>
+                </div>
+              </div>
+            </div>
+        </div>  
+        </div>
+      </div>
+      
+    </div>
+    <div class="hidden hourly-forecast-container">
+      <div class="ease-in-out duration-500 ml-2 mb-1 text-sm">Today at</div>
+    <div class="grid grid-cols-6 gap-3 hourly-card mx-auto">
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+      <div class="each-hourly-card mx-auto border shadow-xl rounded-xl px-4 p-2 text-center">
+        <div>9 PM</div>
+        <img src="../img/icons/1.svg" alt="" class="w-16">
+        <div>18</div>
+      </div>
+    </div>
+    </div>
+  
+    <footer class="text-center">
+      <div class="mt-8 mb-4">Copyright reserved &copy; 2024. Powered by <img src="../img/accuweather.png" class="w-6 h-6 inline"> AccuWeather</div>
+    </footer>
+    <script src="../script/forecast.js"></script>
+    <script src="../script/app.js"></script>
+  
+  </body>
+</html>
